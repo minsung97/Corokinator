@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Noto+Sans+KR:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    /* 400 700 900 */
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 100%;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f1f1f1;
+    color: #404040;
+    font-size: 16px;
+    line-height: 1.8;
+    height: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #404040;
+}
+
+a:hover{
+    text-decoration : none;
+    color: #75A5DE;
+    font-weight: bold;
+}
+
+section {
+    overflow: hidden;
+}
+
+/* header*/
+header {
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    opacity: 0.8;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #eee;
+}
+
+header #large-header{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 6px #C4C4C4;
+}
+
+header #logo{
+    font-family: 'Audiowide', cursive;
+    font-size:  3.2vmin;
+}
+
+header #navbar{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header #navbar ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header #navbar ul .top-menu {
+    font-size: 16px;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+header #small-header{
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    box-shadow: 0px 2px 6px #C4C4C4;
+}
+
+header #menu-box{
+    align-items: center;
+}
+
+#menu-trigger {
+    position: relative;
+    width: 25px;
+    height: 20px;
+}
+
+#menu-trigger, #menu-trigger span {
+    align-items: center;
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+}
+
+#menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #404040;
+    border-radius: 2px;
+}
+
+#menu-trigger span:nth-of-type(1) {
+    top: 0;
+}
+
+#menu-trigger span:nth-of-type(2) {
+    top: 45%
+}
+
+#menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+}
+
+header #menu-trigger.active-1 span:nth-of-type(1) {
+    -webkit-transform: translateY (20px) rotate (-45deg);
+    transform: translateY(11px) rotate(-45deg);
+}
+  
+#menu-trigger.active-1 span:nth-of-type(2) {
+    opacity: 0;
+}
+  
+#menu-trigger.active-1 span:nth-of-type(3) {
+    -webkit-transform: translateY(-20px) rotate(45deg);
+    transform: translateY(-6.5px) rotate(45deg);
+}
+
+header #small-logo {
+    font-family: 'Audiowide', cursive;
+    font-size: 3.2vmin;
+    margin-left: 20px;
+}
+
+header #small-navbar{
+    display: none;
+    height: 50px;
+    box-shadow: 0px 2px 6px #C4C4C4;
+}
+
+header #small-navbar ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header #small-navbar ul .top-menu{
+    font-size: 14px;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* content */
+.section-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#service-info {
+    width: 100%;
+}
+
+#service-info #info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+#service-info .hello-gif-box {
+    display: flex;
+    justify-content: center;
+    padding-left: 80px;
+}
+
+#service-info .hello-info { 
+    /* padding-left: 50px; */
+    min-width: 577px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#service-info .hello-info p {
+    margin-bottom: 30px;
+}
+
+#service-info .hello-info span {
+    font-size: 35px;
+    color: #75A5DE;
+}
+
+#service-info .hello-info #call-box {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    font-size: 16px;
+}
+
+#service-info .hello-info #call-box p {
+    margin-bottom: 0;
+}
+
+#service-info .hello-info #call-box #call-bot-btn {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+
+/* 자가진단 & 선별 진료소 */
+#service-use {
+    width: 100%;
+}
+#service-use #absolute-container {
+    position: relative;
+}
+#service-use #use-container{
+    width: 100%;
+}
+#service-use #use-container #thinking-gif{
+    width: 240px;
+    position: absolute;
+    bottom: 0;
+    right: 250px;
+    z-index: -1;
+}
+#service-use #use-container #use-top{
+    min-width: 926px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#service-use #use-container #use-top p{
+    margin-bottom: 60px;
+}
+#service-use #use-container #use-top span{
+    color: #75A5DE;
+}
+#service-use #use-container #use-top span:hover{
+    font-size: 40px;
+}
+#service-use #use-container #use-top a{
+    text-decoration: none;
+}
+#service-use #use-container #use-bottom{
+    margin-top: 280px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#service-use #use-container #use-bottom p{
+    margin-bottom: 20px;
+}
+#service-use #use-container #use-bottom #more-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#service-use #use-container #use-bottom #more-box p{
+    margin-bottom: 0;
+}
+#service-use #use-container #use-bottom #more-box span{
+    color: #75A5DE;
+}
+#service-use #use-container #use-bottom #more-box #go-local-btn {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+
+/* 지역별 현황 */
+#local {
+    width: 100%;
+}
+#local #absolute-container {
+    position: relative;
+}
+#local #local-container #local-gif{
+    width: 140px;
+    position: absolute;
+    bottom: 25px;
+    right: 150px;
+    z-index: -1;
+}
+#local #local-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    margin-top: 50px;
+}
+#local #local-container #map{
+    width: fit-content;
+}
+#local #local-container #map #main_maplayout {
+    z-index:1
+}
+#local #local-container #map #main_maplayout:hover,
+#local #local-container #map #main_maplayout:focus { 
+    cursor:pointer
+}
+
+#local #local-container #map #main_maplayout svg {display:block; width: 500px;}
+#local #local-container #map #main_maplayout button[data-city^="step_map_city"] {
+    border:0;
+    outline: 0; 
+    position:absolute; 
+    display:block; 
+    margin:0; 
+    padding:8px; 
+    background: #fff; 
+    text-align:center; 
+    box-shadow: 0px 2px 5px #404040;
+    border-radius:30px;
+    width: 60px;
+    height: 60px;
+}
+/* pointer-events: none; */
+#local #local-container #map #main_maplayout button[data-city^="step_map_city"] .name {position:relative; display:inline-block; font-size:11px; line-height:15px; color:#404040; font-weight:400;}
+#local #local-container #map #main_maplayout button[data-city^="step_map_city"] .num {display:block; font-size:20px; line-height:28px; letter-spacing:0; font-weight:700; color:#171717;}
+#local #local-container #map #main_maplayout button[data-city^="step_map_city"].local-select {background-color:#404040;}
+#local #local-container #map #main_maplayout button[data-city^="step_map_city"].local-select .name{color: white;}
+#local #local-container #map #main_maplayout button[data-city^="step_map_city"].local-select .num{color: white;}
+#local #local-container #map #main_maplayout button[data-city="step_map_city1"]	{left:180px; top:110px;} /*서울*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city2"]	{left:370px; top:490px;}/*부산*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city3"]	{left:340px; top:340px;} /*대구*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city4"]	{left:60px; top:85px;} /*인천*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city5"]	{left:140px; top:445px;} /*광주*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city6"]	{left:210px; top:280px;} /*대전*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city7"]	{left:420px; top:420px;} /*울산*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city8"]	{left:145px; top:230px;} /*세종*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city9"]	{left:170px; top:16px;} /*경기*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city10"] {left:300px; top:90px;} /*강원*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city11"] {left:240px; top:190px;} /*충북*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city12"] {left:52px; top:212px;} /*충남*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city13"] {left:150px; top:370px;} /*전북*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city14"] {left:60px; top:500px;} /*전남*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city15"] {left:320px; top:250px;} /*경북*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city16"] {left:270px; top:430px;} /*경남*/
+#local #local-container #map #main_maplayout button[data-city="step_map_city17"] {left:30px; top:580px;} /*제주*/
+
+#local #local-container #table{
+    min-width: 520px;
+    max-width: 520px;
+    word-break: keep-all;
+    /* margin-left: 30px; */
+}
+#local #local-container #table h2{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+#local #local-container #table span{
+    color: #75A5DE;
+}
+#local #local-container #table #stepContents{
+    color: #414141;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* 해외 현황 */
+#global {
+    width: 100%;
+}
+
+#global #global-container {
+    width: 100%;
+}
+#global #absolute-container {
+    position: relative;
+}
+
+#global #global-container #graph{
+    text-align: center;
+}
+
+#global #global-container #rank{
+    text-align: center;
+}
+
+/* #article {
+    width: 100%;
+}
+
+#article #article-container{
+    width: 100%;
+}
+
+#article #article-board{
+    text-align: center;
+} */
+
+/* 관련 기사 */
+#article {
+    width: 100%;
+}
+#article #absolute-container{
+    position: relative;
+}
+#article #absolute-container #news-gif{
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 180px;
+    z-index: -1;
+}
+#article #article-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+}
+#article #news-box {
+    min-width: 295px;
+    margin-top: 36px;
+}
+#article #news-box p{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+#article #news-box span{
+    color: #75A5DE;
+}
+#article #article-box a{
+    text-decoration: none;
+    color: #404040;
+}
+#article #article-box a:hover{
+    text-decoration: none;
+    color: #75A5DE;
+    font-weight: normal;
+}
+
+#article #article-board{
+    text-align: center;
+}
+#article .article-item{
+    width: 100%;
+    min-width: 600px;
+    height: 150px;
+    background-color: #fcfcfc;
+    box-shadow: 0px 2px 6px #C4C4C4;
+    margin-bottom: 20px;
+    padding: 20px 24px;
+}
+
+#article .article-item .article-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#article .article-item .article-text{
+    font-size: 15px;
+    color: #767171;
+    height: 60px;
+    line-height: 20px;
+
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#article .article-item .article-time{
+    font-size: 14px;
+    line-height: 15px;
+    color: #767171;
+    margin-top: 10px;
+}
+
+/* 큰 화면 */
+@media only screen and (min-width:1500px) {
+    #service-use #use-container #thinking-gif{
+        width: 360px;
+        right: 350px;
+    }
+    #service-use #use-container #use-top{
+        font-size: 35px;
+    }
+}
+@media only screen and (min-width:1380px) {
+    #local #local-container #local-gif{
+        width: 200px;
+        right: 250px;
+    }
+}
+@media only screen and (min-width:1400px){
+    #article #absolute-container #news-gif{
+        width: 300px;
+        left: 300px;
+    }
+    #article #news-box p{
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+}

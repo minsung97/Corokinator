@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="docSlider/docSlider.css">
+
+    <script src="docSlider/docSlider.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+</head>
+</head>
+
+<body>
+    <header>
+        <div class="hidden-xs hidden-sm container-fluid" id="large-header">
+            <div class="hidden-xs hidden-sm col-md-4 col-lg-4">
+                <div id="logo">Corokinator</div>
+            </div>
+
+            <div class="hidden-xs hidden-sm col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-2" id="navbar">
+                <ul>
+                    <li class="top-menu"><a href="javascript:void(0);" onclick="docSlider.jumpPage(1)">자가진단</a></li>
+                    <li class="top-menu"><a href="javascript:void(0);" onclick="docSlider.jumpPage(1)">선별 진료소</a></li>
+                    <li class="top-menu"><a href="javascript:void(0);" onclick="docSlider.jumpPage(2)">지역별 현황</a></li>
+                    <!-- <li class="top-menu"><a href="#global-section">해외 현황</a></li> -->
+                    <li class="top-menu"><a href="javascript:void(0);" onclick="docSlider.jumpPage(3)">관련 기사</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hidden-md hidden-lg container-fluid" id="small-header">
+            <div class="col-xs-4 col-sm-4 hidden-md hidden-lg">
+                <div id="small-logo">Corokinator</div>
+            </div>
+            <div class="col-xs-1 col-xs-offset-7 col-sm-1 col-sm-offset-7" style="cursor: pointer;" id="menu-box">
+                <a id="menu-trigger" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 hidden-md hidden-lg container-fluid" id="small-navbar">
+            <ul>
+                <li class="top-menu"><a href="javascript:void(0);" onclick="docSlider.jumpPage(1)">자가진단</a></li>
+                <li class="top-menu"><a href="javascript:void(0);" onclick="docSlider.jumpPage(1)">선별 진료소</a></li>
+                <li class="top-menu"><a href="javascript:void(0);" onclick="docSlider.jumpPage(2)">지역별 현황</a></li>
+                <!-- <li class="top-menu"><a href="#global-section">해외 현황</a></li> -->
+                <li class="top-menu"><a href="javascript:void(0);" onclick="docSlider.jumpPage(3)">관련 기사</a></li>
+            </ul>
+        </div>
+
+    </header>
+    <content>
+        <div class="docSlider">
+            <!-- 서비스 설명 -->
+            <section id="service-info">
+                <div class="section-container">
+                    <div id="info-container">
+                        <div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-3 col-lg-2 col-lg-offset-3">
+                            <div class="hello-gif-box">
+                                <img src="images/hello.gif" id="hello-gif"/>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-1 col-lg-5 col-lg-offset-1">
+                            <div class="hello-info">
+                                <p>안녕하세요!</p>
+                                <p>제 이름은 <span>코로키네이터</span> 예요.</p>
+                                <p>코로나와 관련하여 궁금하신게 있다면</p>
+                                <p>언제든 물어봐주세요.</p>
+                                <div id="call-box">
+                                    <p>코로키네이터 불러보기</p>
+                                    <img src="images/arrow.svg" alt="down-button" id="call-bot-btn"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 자가진단 & 선별 진료소 -->
+            <section id="service-use">
+                <div class="section-container" id="absolute-container">
+                    <div id="use-container">
+                        <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-2 col-lg-8 col-lg-offset-3">
+                            <div id="use-top">
+                                <p>주변에 있는 <span>선별 진료소</span> 위치가 궁금하신가요?</p>
+                                <p>코로나 <span>자가진단</span>을 해보고 싶으신가요?</p>
+                            </div>
+                            <div id="use-bottom">
+                                <p>코로키네이터는 다 답해드릴 수 있어요.</p>
+                                <div id="more-box">
+                                    <p><span>지역별</span> 거리두기 단계가 궁금하시다면</p>
+                                    <img src="images/arrow.svg" alt="down-button" id="go-local-btn"/>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="images/thinking.gif" alt="thinking-corokinator" id="thinking-gif"/>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 지역별 현황 -->
+            <section id="local">
+                <div class="section-container" id="absolute-container">
+                    <div id="local-container">
+                        <div class="col-xs-2 col-xs-offset-1 col-sm-2 col-sm-offset-1 col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2">
+                            <div id="map">
+                                <img src="images/dummy-map.png" alt="dummy-map" id="dummy-map"/>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <div id="table">
+                                <h2><span>서울</span>은 지금 <span>2단계</span>군요.</h2>
+                                <p>행사 제한 인원은 100명 미만까지예요.</p>
+                                <p>식당, 카페는 22시까지만 매장 내 취식이 가능해요.</p>
+                                <p>영화관, PC방, 학원, 놀이공원, 대형마트는 운영 제한이 해제되어요.</p>
+                                <p>대신, 한 칸 띄우기를 꼭 지켜야해요.</p>
+                                <p>스포츠 관람은 10% 관중 입장이 가능해요.</p>
+                                <p>종교 활동은 기존 활동의 20% 이내로 가능해요.</p>
+                            </div>
+                        </div>
+                        <img src="images/local.gif" alt="local-corokinator" id="local-gif"/>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 해외 현황 -->
+            <!-- <section id="global">
+                <div class="section-container">
+                    <div id="global-container">
+                        <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+                            <div class="section-title" id="global-section">
+                                해외 현황
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-5 col-md-offset-1 col-lg-5 col-lg-offset-1">
+                            <div id="graph">
+                                <div>그래프</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5">
+                            <div id="rank">
+                                순위
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- 관련 기사 -->
+            <section id="article">
+                <div class="section-container" id="absolute-container">
+                    <div id="article-container">
+                        <div class="col-xs-2 col-xs-offset-1 col-sm-2 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-1">
+                            <div id="news-box">
+                                <p>코로나 <span>관련 기사</span>가</p>
+                                <p>궁금하신가요?</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="article-box">
+                            <ul>
+                                <li class="article-item">
+                                    <p class = "article-title"></p>
+                                    <p class = "article-text"></p>
+                                    <p class="article-time"></p>
+                                </li>
+                                <li class="article-item">
+                                    <p class = "article-title"></p>
+                                    <p class = "article-text"></p>
+                                    <p class="article-time"></p>
+                                </li>
+                                <li class="article-item">
+                                    <p class = "article-title"></p>
+                                    <p class = "article-text"></p>
+                                    <p class="article-time"></p>
+                                </li>
+                                <li class="article-item">
+                                    <p class = "article-title"></p>
+                                    <p class = "article-text"> </p>
+                                    <p class="article-time"></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img src="images/news.gif" alt="news-corokinator" id="news-gif"/>
+                </div>
+            </section>
+        </div>
+    </content>
+    <footer>
+
+    </footer>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>docSlider.init();</script>
+
+    <div id="frogue-container" class="position-right-bottom"
+      data-chatbot="a7c97f4a-eb19-4e1c-82ca-76828eb180b0"
+      data-user="사용자ID"
+      data-init-key="value"
+      ></div>
+    <!-- data-init-식별키=값 으로 셋팅하면 챗플로우에 파라미터와 연동가능. 식별키는 소문자만 가능 -->
+    <script>
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https:\/\/danbee.ai/js/plugins/frogue-embed/frogue-embed.min.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'frogue-embed'));
+    </script>
+</body>
+
+</html>

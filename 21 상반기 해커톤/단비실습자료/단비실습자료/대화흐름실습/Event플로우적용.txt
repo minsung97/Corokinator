@@ -1,0 +1,26 @@
+
+
+<!--이벤트 버튼 시작 -->
+<a href="javascript:click('info')">소개</a>
+<a href="javascript:click('map')">위치</a>
+<a href="javascript:click('contact')">연락처</a>
+<!--/이벤트 버튼 끝 -->
+
+
+
+<!-- Event 적용 시작 -->
+<script>
+function click(v) {
+	if (frogueReadyFlag) {
+		if (v === 'info') {
+			froguePushEvent('clickEvent', {'name':'info'});
+				} else if (v === 'map') {
+					froguePushEvent('clickEvent', {'name':'map'});
+				} else if (v === 'contact') {
+					froguePushEvent('clickEvent', {'name':'contact'});
+				}
+			}
+		return false;
+	}
+</script>
+<!-- /Event 적용 끝 -->

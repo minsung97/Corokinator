@@ -1,0 +1,29 @@
+<script> 
+if (document.addEventListener) {
+    // Mozilla, Opera, Webkit
+     document.addEventListener("DOMContentLoaded", function () {
+           document.removeEventListener("DOMContentLoaded", arguments.callee, false);
+           htmlReady();
+     }, false);
+} else if (document.attachEvent) {
+    // Internet Explorer
+    document.attachEvent("onreadystatechange", function () {
+          if (document.readyState === "complete") {
+                 document.detachEvent("onreadystatechange", arguments.callee);
+                 htmlReady();
+           }
+      });
+}
+var htmlReadyTimer = null;
+    //DOM이 모두 로드 되었을 때
+function htmlReady () {
+    htmlReadyTimer = setTimeout(function() {
+          if (frogueReadyFlag) {
+                 froguePushEvent('landingEvent', {event_name: '', event_value1: '', event_value2: ''});
+                 htmlReadyTimer = null;
+          } else {
+                 htmlReady();
+          }
+     }, 500);
+}
+</script> 

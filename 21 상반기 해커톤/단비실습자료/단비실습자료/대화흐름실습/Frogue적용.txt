@@ -1,0 +1,18 @@
+
+<!-- Frogue 적용 시작 -->
+   <div id="frogue-container" class="position-right-bottom"
+   data-chatbot="803ebc0a-20d8-436a-be40-b7d15c965e99"
+   data-user="사용자ID"
+   data-init-key="value"
+   ></div>
+   <!-- data-init-식별키=값 으로 셋팅하면 챗플로우에 파라미터와 연동가능. 식별키는 소문자만 가능 -->
+   <script>
+   function(d, s, id){
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "https:\/\/danbee.ai/js/plugins/frogue-embed/frogue-embed.min.js";
+   fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'frogue-embed'));
+   </script>
+<!-- /Frogue 적용 끝 -->

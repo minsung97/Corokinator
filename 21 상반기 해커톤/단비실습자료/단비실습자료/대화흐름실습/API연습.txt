@@ -1,0 +1,18 @@
+1. API 이름 : 날씨API
+
+2. API 메서드 : 
+  [GET] http://api.openweathermap.org/data/2.5/weather
+
+3. Header :
+  > Content-type : JSON(application/json)
+
+4. Query Parameter 5가지
+  > appid : 6817a27f6034bec42c2a3b3db6578020 (서비스 제공처에서 발급한 키)
+  > lang : kr   (언어)
+  > mode : json   (모드)
+  > q : seoul,kr   (지역)
+  > units : metric    (단위/섭씨)
+
+5. 응답  
+  > $.main.temp : 온도
+  > $.weather.[0].main : 날씨 상태
